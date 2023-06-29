@@ -21,7 +21,7 @@ void print(vector<T> v, string sep = " ") {
 }
 
 int main() {
-  vector<int> v{1, 2, 3};
+  vector<int> v{1, 2, 3, 4};
   print(v);
 
   return 0;

@@ -9,7 +9,7 @@
             "name": "(LLDB) Debug",
             "type": "lldb",
             "request": "launch",
-            "program": "${fileDirname}/a",
+            "program": "${fileDirname}/a.out",
             "args": [],
             "cwd": "${fileDirname}/",
             "preLaunchTask": "g++ build active file",

@@ -13,7 +13,7 @@
                 //"-fsanitize=address,undefined",
                 "${file}",
                 "-o",
-                "${fileDirname}/a"
+                "${fileDirname}/a.out"
             ],
             "options": {
                 "cwd": "${fileDirname}/", 
