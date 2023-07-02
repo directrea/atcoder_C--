@@ -25,20 +25,16 @@
 			"#define rep2(i, s, n) for (int i = (s); i < (int)(n); i++)",
 			"#define all(a) (a).begin(), (a).end()",
 			"#define endl \"\\n\"",
+			"#define vec vector",
 			"using ll = long long;",
 			"template <class T>",
             "void print(T out, string end = \"\\n\") {",
             "  cout << out << end;",
             "}",
             "template <class T>",
-            "void print(vector<T> v, string sep = \" \") {",
-            "  for (unsigned long i = 0; i < v.size(); i++) {",
-            "    if (i == 0)",
-            "      cout << v[i];",
-            "    else",
-            "      cout << sep << v[i];",
-            "  }",
-            "  cout << endl;",
+            "void print(vector<T> v) {",
+            "  for (unsigned long i = 0; i < v.size(); i++)",
+            "    cout << v[i] << \" \\n\"[i == v.size() - 1];",
             "}",
 			"",
 			"int main(){",
@@ -48,15 +44,4 @@
 		],
 		"description": "Log output to console"
 	},
-	"vector<>":{
-		"scope":"cpp",
-		"prefix": "v",
-		"body": "vector<$1>",
-	},
-	"vector<vector<>>":{
-		"scope":"cpp",
-		"prefix": "vv",
-		"body": "vector<vector<$1>> $2",
-	}
-
 }

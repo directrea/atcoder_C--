@@ -3,11 +3,17 @@ using namespace std;
 #define rep(i, n) for (int i = 0; i < (int)(n); i++)
 #define rep2(i, s, n) for (int i = (s); i < (int)(n); i++)
 #define all(a) (a).begin(), (a).end()
+#define endl "\n"
+#define vec vector
 using ll = long long;
-
-int main() {
-  int tens = 100000;
-  ll tmp = (ll)tens * (ll)tens;
-  cout << tmp << endl;
-  return 0;
+template <class T>
+void print(T out, string end = "\n") {
+  cout << out << end;
 }
+template <class T>
+void print(vector<T> v) {
+  for (unsigned long i = 0; i < v.size(); i++)
+    cout << v[i] << " \n"[i == v.size() - 1];
+}
+
+int main() { return 0; }

@@ -4,7 +4,9 @@ using namespace std;
 #define rep2(i, s, n) for (int i = (s); i < (int)(n); i++)
 #define all(a) (a).begin(), (a).end()
 #define endl "\n"
+#define vec vector
 using ll = long long;
+
 template <class T>
 void print(T out, string end = "\n") {
   cout << out << end;
@@ -19,10 +21,17 @@ void print(vector<T> v, string sep = " ") {
   }
   cout << endl;
 }
+vector<char> snuke{'s', 'n', 'u', 'k', 'e'};
+vec<vec<char>> grid;
+vec<vec<bool>> went;
 
 int main() {
-  vector<int> v{1, 2, 3, 4};
-  print(v);
+  int h, w;
+  cin >> h >> w;
+
+  grid = vec<vec<char>>(h, vec<char>(w));
+  rep(i, h) rep(j, w) cin >> grid[i][j];
+  went = vec<vec<bool>>(h, vec<bool>(w));
 
   return 0;
 }
