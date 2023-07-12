@@ -16,4 +16,8 @@ void print(vector<T> v) {
     cout << v[i] << " \n"[i == v.size() - 1];
 }
 
-int main() { return 0; }
+int main() {
+  ll a = pow(10, 18);
+
+  return 0;
+}
