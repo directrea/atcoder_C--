@@ -27,6 +27,7 @@
 			"#define endl \"\\n\"",
 			"#define vec vector",
 			"using ll = long long;",
+			"ll mod = 2147483647;",
 			"template <class T>",
             "void print(T out, string end = \"\\n\") {",
             "  cout << out << end;",

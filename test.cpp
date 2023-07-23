@@ -6,6 +6,7 @@ using namespace std;
 #define endl "\n"
 #define vec vector
 using ll = long long;
+ll mod = 2147483647;
 template <class T>
 void print(T out, string end = "\n") {
   cout << out << end;
@@ -16,34 +17,4 @@ void print(vector<T> v) {
     cout << v[i] << " \n"[i == v.size() - 1];
 }
 
-bool isPrime(int n) {
-  rep2(i, 2, n) {
-    if (i * i > n) break;
-    if (n % i == 0) return false;
-  }
-  return true;
-}
-
-int main() {
-  ll n;
-  cin >> n;
-
-  ll ans = 0;
-  vec<int> primes;
-  rep2(i, 2, pow(10, 6)) if (isPrime(i)) primes.push_back(i);
-  rep(i, primes.size()) {
-    int top = i + 1, tail = primes.size();
-    if (primes[i] * pow(primes[top], 3) > n) break;
-    while (top + 1 < tail) {
-      int mid = (top + tail) / 2;
-      if (primes[i] * pow(primes[mid], 3) <= n)
-        top = mid;
-      else
-        tail = mid;
-    }
-    ans += top - i;
-  }
-  print(ans);
-
-  return 0;
-}
+int main() { return 0; }
