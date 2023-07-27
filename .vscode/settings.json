@@ -2,6 +2,8 @@
     "files.associations": {
         "vector": "cpp",
         "iostream": "cpp",
-        "set": "cpp"
-    }
+        "set": "cpp",
+        "tuple": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }

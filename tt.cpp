@@ -28,7 +28,7 @@ T pow(T n, T k, T mod = 2147483647) {
 }
 
 int main() {
-  print(pow(2, 4));
+  vec<int> dat(3);
 
   return 0;
 }
