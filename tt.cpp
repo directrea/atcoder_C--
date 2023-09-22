@@ -16,19 +16,31 @@ void print(vector<T> v) {
   for (unsigned long i = 0; i < v.size(); i++)
     cout << v[i] << " \n"[i == v.size() - 1];
 }
-template <class T>
-T pow(T n, T k, T mod = 2147483647) {
-  ll res = 1;
-  while (k > 0) {
-    if (k & 1) res = res * n % mod;
-    k >>= 1;
-    n = n * n % mod;
-  }
-  return res;
-}
 
 int main() {
-  vec<int> dat(3);
+  int N, M;
+  cin >> N >> M;
+
+  vec<vec<tuple<int, int, int>>> G(N);
+  rep(i, M) {
+    int a, b, x, y;
+    cin >> a >> b >> x >> y;
+    a--, b--;
+    G[a].push_back({b, x, y});
+    G[b].push_back({a, -x, -y});
+  }
+  vec<bool> visited(N);
+  vec<pair<int, int>> pos(N);
+  auto dfs = [&](auto self, int now, ll nowx, ll nowy) {
+    visited[now] = true;
+    pos[now] = {nowx, nowy};
+    for (auto &[next, x, y] : G[now]) {
+      if (visited[next]) continue;
+      self(self, next, nowx + x, nowy + y);
+    }
+  };
+
+  dfs(dfs, 0, 0, 0);
 
   return 0;
 }

@@ -3,7 +3,9 @@
         "vector": "cpp",
         "iostream": "cpp",
         "set": "cpp",
-        "tuple": "cpp"
+        "tuple": "cpp",
+        "string": "cpp",
+        "map": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
