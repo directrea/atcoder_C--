@@ -16,26 +16,18 @@ void print(vector<T> v) {
   for (unsigned long i = 0; i < v.size(); i++)
     cout << v[i] << " \n"[i == v.size() - 1];
 }
-void random_generate(int N, vector<int>& A) {
-  // rand() % N + 1
-  for (int i = 0; i < N; i++) A[i] = i + 1;
-  shuffle(A.begin(), A.end(), mt19937(0));
+
+int random(int low, int high) {
+  std::default_random_engine gen;
+  std::uniform_int_distribution<> dist(low, high);
+  return dist(gen);
 }
-
-vector<int> solve(int N, vector<int> a) { return vec<int>; }
-
-vector<int> solveSimple(int n, vector<int> a) { return vec<int>; }
 
 int main() {
   for (int i = 0; i < 1000; i++) {
     int N = 10;
     vector<int> A(N);
     random_generate(N, A);
-    auto j1 = solve(N, A);
-    auto j2 = solveSimple(N, A);
-    if (!equal(j1.begin(), j1.end(), j2.begin())) {
-      print(A);
-    }
   }
 
   return 0;
