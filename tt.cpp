@@ -9,8 +9,17 @@ template <class T> void print(T out, string end = "\n") { cout << out << end; }
 template <class T> void print(vec<T> &v) { rep(i, v.size()) cout << v[i] << " \n"[i == (int)v.size() - 1]; }
 
 int main() {
-  ll a = 1e18;
-  print(a);
+  int n, q;
+  cin >> n >> q;
+  vec<int> a(n);
+  rep(i, n) cin >> a[i];
+  sort(all(a));
+
+  rep(i, q) {
+    int x;
+    cin >> x;
+    print(a.end() - lower_bound(all(a), x));
+  }
 
   return 0;
 }

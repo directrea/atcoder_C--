@@ -15,7 +15,7 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
-		"cpp template": {
+	"cpp template": {
 		"scope": "cpp",
 		"prefix": "cpp template",
 		"body": [
@@ -36,4 +36,24 @@
 		],
 		"description": "Log output to console"
 	},
+	"if(ansb)":{
+		"scope":"cpp",
+		"prefix":"if(ansb)",
+		"body":[
+			"if (ansb)",
+			"\tprint(\"Yes\");",
+			"else",
+			"\tprint(\"No\");",
+		]
+	},
+	"in":{
+		"scope":"cpp",
+		"prefix":"in",
+		"body":[
+			"auto in = [&](unsigned long r, unsigned long c, long rsize, long csize) -> bool {"
+			"\treturn r < rsize && c < csize;"
+			"};"
+		],
+		"description": "配列の範囲判定"
+	}
 }
