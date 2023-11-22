@@ -8,8 +8,4 @@ using ll = long long;
 template <class T> void print(T out, string end = "\n") { cout << out << end; }
 template <class T> void print(vec<T> &v) { rep(i, v.size()) cout << v[i] << " \n"[i == (int)v.size() - 1]; }
 
-int main() {
-  print('2' - '0');
-
-  return 0;
-}
+int main() { return 0; }
