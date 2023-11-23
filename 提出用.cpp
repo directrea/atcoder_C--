@@ -11,17 +11,25 @@ template <class T> void print(vec<T> v) { rep(i, v.size()) cout << v[i] << " \n"
 int main() {
   ll x, a, d, n;
   cin >> x >> a >> d >> n;
-  if (d < 0) x = -x, a = -a, d = -d;
 
-  ll top = 0, tail = n;
-  while (top + 1 < tail) {
-    ll mid = (top + tail) / 2;
-    if (a + d * mid <= x)
-      top = mid;
-    else
-      tail = mid;
-  }
-  print(abs(x - (a + d * top)));
+  auto solve = [&]() -> ll {
+    ll ans = INT64_MAX;
+    ans = min(ans, abs(x - a));
+    ans = min(ans, abs(x - (a + d * (n - 1))));
+
+    ll top = 0, tail = n;
+    while (top + 1 < tail) {
+      ll mid = (top + tail) / 2;
+      ll tmp = abs(x - (a + d * mid));
+      if (ans > tmp) {
+        top = mid;
+        ans = min(ans, tmp);
+      } else
+        tail = mid;
+    }
+    return ans;
+  };
+  print(solve());
 
   return 0;
 }

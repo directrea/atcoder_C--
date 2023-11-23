@@ -7,28 +7,14 @@ using namespace std;
 #define vec vector
 using ll = long long;
 ll mod = 2147483647;
-template <class T>
-void print(T out, string end = "\n") {
-  cout << out << end;
-}
-template <class T>
-void print(vector<T> v) {
-  for (unsigned long i = 0; i < v.size(); i++)
-    cout << v[i] << " \n"[i == v.size() - 1];
+template <class T> void print(T out, string end = "\n") { cout << out << end; }
+template <class T> void print(vector<T> v) {
+  for (unsigned long i = 0; i < v.size(); i++) cout << v[i] << " \n"[i == v.size() - 1];
 }
 
-int random(int low, int high) {
-  std::default_random_engine gen;
-  std::uniform_int_distribution<> dist(low, high);
-  return dist(gen);
-}
+int myrand(int low, int high) { return low + rand() % (high - low); }
 
 int main() {
-  for (int i = 0; i < 1000; i++) {
-    int N = 10;
-    vector<int> A(N);
-    random_generate(N, A);
-  }
-
+  rep(i, 10) print(myrand(1, 2));
   return 0;
 }
