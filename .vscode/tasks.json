@@ -4,13 +4,13 @@
         {
             "type": "process",
             "label": "g++ build active file",
-            "command": "/usr/local/Cellar/llvm/17.0.1/bin/clang++",
+            "command": "/opt/homebrew/bin/g++-14",
             "args": [
-                "-std=c++23",
+                "-fdiagnostics-color=always",
                 "-g",
-                "-Wall",
-                "-Wextra",
                 "${file}",
+                "-O2",
+                "-Wall",
                 "-o",
                 "${fileDirname}/a.out"
             ],

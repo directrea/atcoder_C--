@@ -1,0 +1,7 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/srea/Documents/atcoder_C--/a.out'
+relocations:
+  - { offsetInCU: 0x16E89, offset: 0x16E89, size: 0x8, addend: 0x0, symName: __ZStL8__ioinit, symObjAddr: 0x67360, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0x173E5, offset: 0x173E5, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x20, symBinAddr: 0x100003D60, symSize: 0x114 }
+...

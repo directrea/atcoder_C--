@@ -26,12 +26,12 @@
             "#define all(a) (a).begin(), (a).end()",
             "#define vec vector",
             "using ll = long long;",
-			"template <class T> void print(T out, string end = \"\\n\") { cout << out << end; }"
-			"template <class T> void print(vec<T> v) { rep(i, v.size()) cout << v[i] << \" \\n\"[i == (int)v.size() - 1]; }"
+			"template <class T> void print(T out, string end = \"\\n\") { cout << out << end; }",
+			"template <class T> void print(vec<T> v) { rep(i, v.size()) cout << v[i] << \" \\n\"[i == (int)v.size() - 1]; }",
             "",
             "int main() {",
-            "	$1\n",
-            "	return 0; "
+            "\t$1\n",
+            "\treturn 0;",
 			"}"
 		],
 		"description": "Log output to console"
@@ -50,8 +50,8 @@
 		"scope":"cpp",
 		"prefix":"in",
 		"body":[
-			"auto in = [&](unsigned long r, unsigned long c, long rsize, long csize) -> bool {"
-			"\treturn r < rsize && c < csize;"
+			"auto in = [&](unsigned long r, unsigned long c, long rsize, long csize) -> bool {",
+			"\treturn r < rsize && c < csize;",
 			"};"
 		],
 		"description": "配列の範囲判定"
